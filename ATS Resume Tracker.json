@@ -1,0 +1,411 @@
+{
+  "name": "ATS Resume Tracker",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "💼 Apply for Developer at Shivashakti Team",
+        "formDescription": "\nJoin our dynamic team of innovators and problem-solvers.\nAs a Developer, you’ll work on real-world projects, build modern web & AI solutions, and grow your career with hands-on learning.\n\n🔹 Role: Developer\n🔹 Location: Remote / Hybrid\n🔹 Skills:Trust\n🔹 Experience: Fresher / Interns Welcome\n\n✨ Ready to build the future with us?\n👉 Click “Submit” to join Shivashakti Team.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Full Name",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "E Mail",
+              "fieldType": "email",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Linkedin"
+            },
+            {
+              "fieldLabel": "Actual Resume",
+              "fieldType": "file",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {
+          "appendAttribution": false,
+          "respondWithOptions": {
+            "values": {
+              "formSubmittedText": "🎊 You’ve successfully applied for the Developer role at Shivashakti Team. We’ll get in touch with you soon 😊"
+            }
+          },
+          "customCss": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Job Application Form</title>\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap\" rel=\"stylesheet\">\n<style>\n:root {\n\t/* Typography */\n\t--font-family: 'Poppins', 'Open Sans', sans-serif;\n\t--font-weight-normal: 400;\n\t--font-weight-bold: 600;\n\t--font-size-body: 13px;\n\t--font-size-label: 14px;\n\t--font-size-input: 14px;\n\t--font-size-header: 22px;\n\t--font-size-paragraph: 14px;\n\n\t/* Colors & Gradients */\n\t--color-background: linear-gradient(135deg, #f8fbff, #f0f4ff);\n\t--color-card-bg: #ffffff;\n\t--color-card-border: #e4e8ff;\n\t--color-card-shadow: rgba(112, 128, 255, 0.12);\n\t--color-header: #2d2e8b;\n\t--color-header-subtext: #7b7ee0;\n\t--color-label: #4a4b57;\n\t--color-input-text: #333;\n\t--color-input-border: #d1d7ff;\n\t--color-focus-border: #6a5acd;\n\t--color-submit-btn-bg: linear-gradient(135deg, #7066ff, #ff7eb3);\n\t--color-submit-btn-text: #ffffff;\n\t--color-submit-btn-hover: linear-gradient(135deg, #5e56f0, #ff6699);\n\t--color-error: #ff4757;\n\t--color-required: #ff4757;\n\t--glow-color: rgba(112, 128, 255, 0.4);\n\n\t/* Border Radius */\n\t--border-radius-card: 12px;\n\t--border-radius-input: 8px;\n\t--border-radius-clear-btn: 50%;\n\n\t/* Spacing */\n\t--padding-container-top: 32px;\n\t--padding-card: 28px;\n\t--padding-form-input: 14px;\n\n\t/* Dimensions */\n\t--container-width: 460px;\n\t--submit-btn-height: 50px;\n\n\t/* Others */\n\t--box-shadow-card: 0 6px 20px 0 rgba(98, 91, 255, 0.1);\n\t--opacity-placeholder: 0.6;\n}\n\n* {\n\tbox-sizing: border-box;\n\tmargin: 0;\n\tpadding: 0;\n\tfont-family: var(--font-family);\n}\n\nbody {\n\tbackground: var(--color-background);\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: flex-start;\n\tmin-height: 100vh;\n\tpadding-top: var(--padding-container-top);\n}\n\n.form-card {\n\tbackground: var(--color-card-bg);\n\twidth: var(--container-width);\n\tpadding: var(--padding-card);\n\tborder-radius: var(--border-radius-card);\n\tbox-shadow: var(--box-shadow-card);\n\tborder: 1px solid var(--color-card-border);\n}\n\n.form-card h2 {\n\tcolor: var(--color-header);\n\tfont-size: var(--font-size-header);\n\tmargin-bottom: 8px;\n\ttext-align: center;\n}\n\n.form-card p {\n\tcolor: var(--color-header-subtext);\n\tfont-size: var(--font-size-paragraph);\n\tmargin-bottom: 24px;\n\ttext-align: center;\n}\n\nlabel {\n\tdisplay: block;\n\tmargin-bottom: 6px;\n\tcolor: var(--color-label);\n\tfont-weight: var(--font-weight-bold);\n\tfont-size: var(--font-size-label);\n}\n\ninput[type=\"text\"],\ninput[type=\"email\"],\ninput[type=\"tel\"],\ntextarea {\n\twidth: 100%;\n\tpadding: var(--padding-form-input);\n\tmargin-bottom: 16px;\n\tborder: 1px solid var(--color-input-border);\n\tborder-radius: var(--border-radius-input);\n\tfont-size: var(--font-size-input);\n\tcolor: var(--color-input-text);\n\tbackground: #fff;\n\ttransition: 0.3s;\n}\n\ninput[type=\"text\"]::placeholder,\ninput[type=\"email\"]::placeholder,\ninput[type=\"tel\"]::placeholder,\ntextarea::placeholder {\n\tcolor: var(--color-input-text);\n\topacity: var(--opacity-placeholder);\n}\n\ninput:focus,\ntextarea:focus {\n\toutline: none;\n\tborder-color: var(--color-focus-border);\n\tbox-shadow: 0 0 6px var(--glow-color);\n}\n\ntextarea {\n\tresize: vertical;\n\tmin-height: 100px;\n}\n\n.checkbox-group {\n\tdisplay: flex;\n\talign-items: center;\n\tmargin-bottom: 16px;\n}\n\n.checkbox-group input[type=\"checkbox\"] {\n\twidth: 20px;\n\theight: 20px;\n\tmargin-right: 8px;\n}\n\n.submit-btn {\n\twidth: 100%;\n\theight: var(--submit-btn-height);\n\tbackground: var(--color-submit-btn-bg);\n\tcolor: var(--color-submit-btn-text);\n\tborder: none;\n\tborder-radius: var(--border-radius-input);\n\tfont-size: 16px;\n\tfont-weight: var(--font-weight-bold);\n\tcursor: pointer;\n\ttransition: 0.3s;\n\tbox-shadow: 0 4px 12px rgba(112, 102, 255, 0.3);\n}\n\n.submit-btn:hover {\n\tbackground: var(--color-submit-btn-hover);\n\tbox-shadow: 0 6px 20px rgba(112, 102, 255, 0.5);\n}\n\n.required {\n\tcolor: var(--color-required);\n\tmargin-left: 2px;\n}\n\n.success-message {\n\ttext-align: center;\n\tcolor: #2ecc71;\n\tfont-weight: bold;\n\tmargin-top: 16px;\n\tfont-size: 14px;\n}\n</style>\n</head>\n<body>\n\n<div class=\"form-card\">\n\t<h2>Apply Developer Role</h2>\n\t<p>Join the <strong>Shivashakti Team</strong> and build amazing products 🚀</p>\n\n\t<form id=\"jobForm\">\n\t\t<label for=\"name\">Full Name <span class=\"required\">*</span></label>\n\t\t<input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Enter your full name\" required>\n\n\t\t<label for=\"email\">Email <span class=\"required\">*</span></label>\n\t\t<input type=\"email\" id=\"email\" name=\"email\" placeholder=\"Enter your email\" required>\n\n\t\t<label for=\"phone\">Phone</label>\n\t\t<input type=\"tel\" id=\"phone\" name=\"phone\" placeholder=\"Enter your phone number\">\n\n\t\t<label for=\"portfolio\">Portfolio / LinkedIn</label>\n\t\t<input type=\"text\" id=\"portfolio\" name=\"portfolio\" placeholder=\"Link to your portfolio\">\n\n\t\t<label for=\"message\">Message / Cover Letter</label>\n\t\t<textarea id=\"message\" name=\"message\" placeholder=\"Write a short introduction...\"></textarea>\n\n\t\t<div class=\"checkbox-group\">\n\t\t\t<input type=\"checkbox\" id=\"terms\" name=\"terms\" required>\n\t\t\t<label for=\"terms\">I agree to the terms and conditions</label>\n\t\t</div>\n\n\t\t<button type=\"submit\" class=\"submit-btn\">Apply Now 🚀</button>\n\t\t<div class=\"success-message\" id=\"successMessage\" style=\"display:none;\">✅ Application submitted! We'll get back to you soon 😊</div>\n\t</form>\n</div>\n\n<script>\nconst form = document.getElementById('jobForm');\nconst successMessage = document.getElementById('successMessage');\n\nform.addEventListener('submit', function(e) {\n\te.preventDefault();\n\t// Here you can integrate with backend / n8n / Firebase\n\tsuccessMessage.style.display = 'block';\n\tform.reset();\n});\n</script>\n\n</body>\n</html>\n"
+        }
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.3,
+      "position": [
+        0,
+        -48
+      ],
+      "id": "b1a71a09-5abf-4221-8d56-47e3cc39c1a9",
+      "name": "On form submission",
+      "webhookId": "e15138a4-54a1-455b-8d8c-90eb4208808d"
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "binaryPropertyName": "Actual_Resume",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        224,
+        -48
+      ],
+      "id": "60d16c11-4d39-44be-9cdf-0cbd81f6911e",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.text }}",
+        "hasOutputParser": true,
+        "messages": {
+          "messageValues": [
+            {
+              "message": "Rule 1: Do not exceed maximum of 75 words. As an AI  with advanced capabilities in talent acquisition, analyze a candidate's resume against a job description. Output must be in ${output_language). Structure:\n 1. Compatibility Rating: Score 1-10 with rationale.\n 2. ATS Score: Realistic number out of 100 such as 43, 76, 89, reflecting keyword and skills alignment.\n 3. Recommendation: Advise if candidate should be interviewed with reasoning. Job description: \"Developer\" at Atomise Al Resume: {Actual Resume}"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        448,
+        -48
+      ],
+      "id": "fc3fff36-990d-4437-8376-d425e7bbd788",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        464,
+        176
+      ],
+      "id": "c7285ea9-b780-4f5f-bdc9-db2c20ba00e4",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "DKW5NGg5JJ9trEFC",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n\n\"ats_score\": 82,\n\n\"summary\": \"Your resume is well-structured and highlights relevant experience, but could use more targeted keywords to improve ATS compatibility.\"\n\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        592,
+        176
+      ],
+      "id": "b07b6da5-45c5-4221-968d-a33182cb872b",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "15800991-d07b-42a5-bc15-b7bc234cccdb",
+              "leftValue": "={{ $json.output.ats_score }}",
+              "rightValue": "=70",
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        800,
+        -48
+      ],
+      "id": "5e1a70ed-29b2-4a9b-9d1d-2bb9d8887612",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1bcAn1PTV4who_qhXdHKkmewBJuuFHAqyKyhCzfL5xEw",
+          "mode": "list",
+          "cachedResultName": "ShortListed Students",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1bcAn1PTV4who_qhXdHKkmewBJuuFHAqyKyhCzfL5xEw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1bcAn1PTV4who_qhXdHKkmewBJuuFHAqyKyhCzfL5xEw/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Full Name": "={{ $('On form submission').item.json['Full Name'] }}",
+            "E Mail": "={{ $('On form submission').item.json['E Mail'] }}",
+            "LinkedIn": "={{ $('On form submission').item.json.Linkedin }}",
+            "AI Rating and Summary": "={{ $json.output.ats_score }}\n\n\n{{ $json.output.summary }}",
+            " CV": "={{ $('On form submission').item.json['Actual Resume'][0].filename }}"
+          },
+          "matchingColumns": [
+            "E Mail"
+          ],
+          "schema": [
+            {
+              "id": " CV",
+              "displayName": " CV",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Full Name",
+              "displayName": "Full Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "E Mail",
+              "displayName": "E Mail",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "LinkedIn",
+              "displayName": "LinkedIn",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "AI Rating and Summary",
+              "displayName": "AI Rating and Summary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1024,
+        -48
+      ],
+      "id": "d6106599-2f03-4a54-9a8c-5c4d5fc94264",
+      "name": "Append or update row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "hPDAyT41CVAcfQG3",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "sharabumanoj123@gmail.com",
+        "subject": "New Candidate Awaiting Review",
+        "emailType": "text",
+        "message": "=Hello HR, A new CV has been successfully received in our system. Please review the candidate's details at your earliest convenience.\n\nCandidate Name: {{ $('On form submission').item.json['Full Name'] }}\n\nCandidate E-mail:{{ $('On form submission').item.json['E Mail'] }}\nCandidate Linkedin:{{ $('On form submission').item.json.Linkedin }}\n\nCandidate AI Rating: {{ $('Basic LLM Chain').item.json.output.ats_score }}\n\nThank you for your attention. Best regards, Automated CV Screening",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1248,
+        -48
+      ],
+      "id": "9173d1ef-7b55-4a3e-8c34-45e3ce979380",
+      "name": "Send a message",
+      "webhookId": "ad508317-9f27-4588-a809-12e3c97580bf",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "5CsIVgaqfMBn7kCr",
+          "name": "Gmail account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('On form submission').item.json['E Mail'] }}",
+        "subject": "🎉 Thank you for applying to the role of Developer  at ShivaShakti",
+        "emailType": "text",
+        "message": "=Dear  {{ $('On form submission').item.json['Full Name'] }}, \n\n\n🙏 Thank you so much for applying to the Developer at Shivashakti!   \nWe’re super excited 🚀 that you’re considering us as your next step toward an AI-powered future.  \n\nAt ShivaShakti, our biggest strength is our people — “ShivaShakti Innovators.” 💡 Every day, we aim to create a culture of inclusion, creativity, and collaboration — where you can bring your full self to work and help build impactful AI-driven solutions that shape the world 🌍.\n\n✨ What happens next: Your application is being reviewed by our Talent & Tech Team 🧠. If your profile matches our needs, we’ll reach out soon 📞 to discuss the next steps of the process.  \nWhile you wait:  \n\n1) 💻 Visit our Careers Page for interview tips & Devolpers paths.  \n2) 🌐 Follow us on LinkedIn, Instagram, and X (@ShivaShaktifficial) to explore life at ShivaShakti and see how our teams are building the future with AI.\nIf you have any questions, just drop us a message or email at shivashakthimanoj@gmail.com 💌\nOnce again, thank you for your interest in joining ShivaShakti ❤️\nWe can’t wait to see what you’ll bring to our Devoleper family! 🤝\n\nWarm regards,\nShivaShakti Team\nInnovating India with AI 🇮🇳",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1472,
+        -48
+      ],
+      "id": "1e842a27-ccf5-47e9-a3a4-bcf18f4e5f75",
+      "name": "Send a message1",
+      "webhookId": "ad508317-9f27-4588-a809-12e3c97580bf",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "5CsIVgaqfMBn7kCr",
+          "name": "Gmail account 4"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append or update row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message": {
+      "main": [
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "ff587004-5d76-4c61-b676-883336a266c5",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "e26bf43309d89032509aedd6d9b0df907eafac62ce06f98f57cb8870a783eaec"
+  },
+  "id": "l92FKsulyfcvjuCw",
+  "tags": []
+}
